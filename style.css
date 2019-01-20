@@ -10,32 +10,43 @@
 
 button:focus {
     outline: none;
+}
 
+
+body {
+    background-image: url(img/clouds.jpg);
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-color: #A5DCF0; 
+    height:100vh;
+    
 }
 
 .wrapper {
-    margin: 0 auto;
-    width: 1200px;
-    height:800px;
+    margin: 34px 12% 0 12%;
+    /* width: 1100px; */
+    min-width: 590px;
+    
+    
 }
 
 main {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    /* border:pink 1px solid; */
-    
-    
+    justify-content: space-between;
+    border:pink 1px solid;
+
 }
 
 
 .rocketCard {
-    margin-top:150px;
+    margin-top:42px;
     display: flex;
     flex-direction: column;
     padding: 32px;
     border: 1.5px #123A60 solid;
     border-radius: 20px;
+    background-color: white;
 }
 
 
@@ -78,6 +89,7 @@ img {
     border-radius: 6px;
     font-family:monospace;
     font-size:1em;
+    margin-bottom: 5px;
 }
 
 
@@ -136,12 +148,91 @@ img {
 
 
 #printRocketInfo {
-font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-font-weight: bold;
-font-size: 1.2em;
-color: rgb(33, 65, 95);
-border: 1.5px #123A60 solid;
-border-radius: 6px;
-padding: 32px;
-margin: 40px auto 0 auto;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: rgb(33, 65, 95);
+    border: 1.5px #123A60 solid;
+    border-radius: 20px;
+    padding: 32px;
+    /* width: 1100px; */
+    background-color: white;
 }
+
+
+/* ------------------------media queries------------------------------ */
+
+
+@media (max-width: 1400px) {
+    main {
+      display: block; 
+    }
+
+
+}
+
+
+@media (max-width: 770px) {
+    body {
+      /* background-size: contain;
+      background-position: center bottom; */
+    }
+    .rocketCard {
+        width: 280px;
+        font-size: .7em;
+    }
+
+    .rocketCard__Info {
+        display: block;
+    }
+
+    main {
+        display: flex;
+    }
+
+    .wrapper {
+       margin:34px 4% 0 4%;
+    }
+}
+
+
+@media (max-width: 660px) {
+    main {
+        display: block;
+    }
+
+    .rocketCard {
+        width: 100%;
+        font-size: .7em;
+    }
+
+    #printRocketInfo {
+        width: auto;
+    }
+
+    .wrapper {
+       margin:34px 1% 0 1%;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .rocketCard {
+        width: 280px;
+        font-size: .7em;
+    }
+
+    main {
+        display: block;
+    }
+
+    #printRocketInfo {
+        width: 280px;
+    }
+
+    .wrapper {
+        margin:34px 15% 0 15%;
+     }
+    
+}
+
